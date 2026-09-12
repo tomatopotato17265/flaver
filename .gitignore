@@ -38,3 +38,10 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
+
+# wrangler
+
+node_modules/
+.wrangler/
+.dev.vars
+worker-configuration.d.ts

@@ -1,0 +1,5 @@
+# Signing key for session tokens.
+TOKEN_SECRET=token_secret
+
+# Enables POST /api/auth/dev, which mints a token without Mojang session proof. Required to test in offline-mode.
+DEV_AUTH=true

@@ -1,0 +1,25 @@
+{
+  "name": "flaver-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Coordination backend for the Flaver Minecraft mod: identity, friends, server registry and presence.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "types": "wrangler types",
+    "db:init": "wrangler d1 execute flaver-db --local --file ./schema.sql",
+    "db:init:remote": "wrangler d1 execute flaver-db --remote --file ./schema.sql",
+    "smoke": "./scripts/smoke.sh",
+    "db:create": "wrangler d1 create flaver-db",
+    "secret": "wrangler secret put TOKEN_SECRET"
+  },
+  "dependencies": {
+    "hono": "^4.6.14"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260911.1",
+    "typescript": "^5.7.2",
+    "wrangler": "^4.131.1"
+  }
+}
